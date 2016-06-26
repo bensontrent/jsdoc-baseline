@@ -11,7 +11,7 @@ li.jqtree_common {
 }
 
 li.jqtree-closed > ul {
-    display: none;
+   /* display: none; */
 }
 
 .jqtree-title {
@@ -34,4 +34,140 @@ li.jqtree-closed > ul {
 
 .jqtree-toggler:hover {
     text-decoration: none;
+}
+
+
+@navWidth: 320px;
+
+@import "common.less";
+
+::-webkit-scrollbar{
+    width: 8px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: gray;
+    border-radius: 4px;
+}
+
+.navigation{
+  position: fixed;
+  float: left;
+  width: @navWidth;
+  height: 100%;
+  background-color: #1a1a1a;
+
+  .applicationName{
+    margin: 0;
+    margin-top: 15px;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+
+    a{
+      outline: 0;
+      color: #ffffff;
+      text-decoration: none;
+      &:hover,
+      &:focus{
+        color: #cccccc;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .search{
+    padding: 10px 15px;
+
+    input{
+      width: 90%;
+      padding: 4px 5% 4px 5%;
+      font-size: 12px;
+      line-height: 20px;
+      border: 1px solid #555555;
+      background-color: #333333;
+      color: #fff;
+    }
+  }
+
+  .list{
+    padding: 10px 15px 0 15px;
+    position: relative;
+    overflow: auto;
+  }
+
+  li.item{
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #333;
+
+    a{
+      outline: 0;
+      color: #bbb;
+      text-decoration: none;
+      &:hover,
+      &:focus{
+        color: #fff;
+      }
+    }
+
+    .title{
+      cursor: pointer;
+      position: relative;
+      display: block;
+      font-size: 13px;
+
+      a{
+        outline: 0;
+        color: #e1e1e1;
+        text-decoration: none;
+        &:hover,
+        &:focus{
+          color: #fff;
+        }
+      }
+
+      .type-signature{
+        position: relative;
+        display: block;
+        border-radius: 3px;
+        font-size: 11px;
+        padding: 2px 5px;
+        float: right;
+        top: -1px;
+      }
+
+      .static{
+        background-color: #779c34;
+        color: #000;
+      }
+      .namespace{
+        background-color: #808080;
+        color: #000;
+      }
+    }
+
+    .subtitle{
+      margin-top: 10px;
+      font-size: 10px;
+      font-weight: bold;
+      color: #779c34;
+      display: block;
+    }
+
+    ul{
+      & > li{
+        font-size: 11px;
+        padding-left: 8px;
+        margin-top: 2px;
+      }
+    }
+
+    .itemMembers{
+      display: none;
+    }
+  }
 }

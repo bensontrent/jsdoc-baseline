@@ -316,3 +316,114 @@ td > p:last-child {
     border-left-color: @brand-info;
     border-radius: @border-radius-small;
 }
+
+
+
+
+code,
+pre {
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    direction: ltr;
+    margin: 0;
+    padding: 0;
+    border: none;
+    color: inherit
+}
+
+pre {
+    overflow: auto;
+    word-wrap: normal;
+    margin: 0;
+    padding: .85em 1em;
+    margin-bottom: 1.275em;
+    background: #f7f7f7
+}
+
+pre>code {
+    display: inline;
+    max-width: initial;
+    padding: 0;
+    margin: 0;
+    overflow: initial;
+    line-height: inherit;
+    font-size: .85em;
+    white-space: pre;
+    background: 0 0
+}
+
+pre>code:after,
+pre>code:before {
+    content: normal
+}
+
+code {
+    padding: .2em;
+    margin: 0;
+    font-size: .85em;
+    background-color: #f7f7f7
+}
+
+code:after,
+code:before {
+    letter-spacing: -.2em;
+    content: "\00a0"
+}
+
+table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    overflow: auto
+}
+
+table td,
+table th {
+    padding: 6px 13px;
+    border: 1px solid #eee
+}
+
+table tr {
+    background-color: #fff;
+    border-top: 1px solid #ccc
+}
+
+table tr:nth-child(2n) {
+    background-color: #f8f8f8
+}
+
+table th {
+    font-weight: 700
+}
+
+
+
+.jsdoc-details-table table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    overflow: auto
+}
+
+.jsdoc-details-table table td,
+.jsdoc-details-table table th {
+    padding: 6px 13px;
+}
+
+.jsdoc-details-table table tr {
+    background-color: #fff;
+    border-top: 1px solid #ccc
+}
+
+.jsdoc-details-table table tr:nth-child(2n) {
+    background-color: #f8f8f8
+}
+
+.jsdoc-details-table table th {
+    font-weight: 700
+}
+table td strong {
+    font-family: 'Inconsolata', monospace !important;
+    color:#1F4AC7;
+}
